@@ -4,8 +4,8 @@
  */
 exports.seed = async function(knex) {
   // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
+  await knex('items').del()
+  await knex('items').insert([
     {id: 1, name: 'Great Blue Heron', image_url: 'https://www.allaboutbirds.org/guide/assets/photo/60314201-480px.jpg', video_url: 'https://www.youtube.com/watch?v=droo7sFCuIQ', is_sky: true},
     {id: 2, name: 'Bald Eagle', image_url: 'https://www.allaboutbirds.org/guide/assets/photo/60328971-480px.jpg', video_url: 'https://www.youtube.com/watch?v=BEgEIEfSuvU' , is_sky: true},
     {id: 3, name: 'Osprey', image_url: 'https://cdn.download.ams.birds.cornell.edu/api/v1/asset/60320581/1800', video_url: 'https://www.youtube.com/watch?v=428L7cR4AMU' , is_sky: true},
