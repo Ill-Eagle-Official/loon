@@ -1,7 +1,13 @@
+// Base Dependencies
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
+// Components
+import HomePage from './components/HomePage';
 import NavBar from './components/NavBar';
 
 class App extends Component {
@@ -29,10 +35,14 @@ class App extends Component {
     return (
       <>
       <div className="App">
-        <h1>{ this.state.message }</h1>
-        <button onClick={this.fetchData} >
-          Fetch Data
-        </button>        
+
+        <Router>
+          <NavBar />
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+          </Routes>
+        </Router>
+
       </div>
       </>
     );
