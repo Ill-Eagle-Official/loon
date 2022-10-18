@@ -14,6 +14,6 @@ exports.seed = async function(knex) {
     {id: 6, name: 'Black Bear', image_url: 'https://cdn.britannica.com/17/235817-050-97A76099/American-black-bear-ursus-americanus-standing-stream-British-Columbia-Canada.jpg', video_url: 'https://www.youtube.com/watch?v=hDiKSdfyVTo', is_land: true},
     {id: 7, name: 'Sockeye Salmon', image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Sockeye_salmon_swimming_right.jpg', video_url: 'https://www.youtube.com/watch?v=T7zj2f7oStw', is_sea: true},
     {id: 8, name: 'Orca', image_url: 'https://i.cbc.ca/1.6201135.1633481213!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/orca-study-ubc.jpg', video_url: 'https://www.youtube.com/watch?v=pEP0sMO-nUQ', is_sea: true},
-    {id: 9, name: 'Painted Turtle', image_url: 'https://spca.bc.ca/wp-content/uploads/2022/05/western-painted-turtle-on-log-credit-Tracey-Thomas.jpg', video_url: 'https://www.youtube.com/watch?v=Az_2M-uaHCU', is_sea: true},
+    {id: 9, name: 'Painted Turtle', image_url: 'https://spca.bc.ca/wp-content/uploads/2022/05/western-painted-turtle-on-log-credit-Tracey-Thomas.jpg', video_url: 'https://www.youtube.com/watch?v=p-eo7ykjP64', is_sea: true},
   ]);
 };
