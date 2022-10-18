@@ -8,9 +8,9 @@ exports.up = function (knex) {
     table.string("name");
     table.string("image_url");
     table.string("video_url");
-    table.boolean("is_land");
-    table.boolean("is_sea");
-    table.boolean("is_sky");
+    table.boolean("is_land").defaultTo(false);
+    table.boolean("is_sea").defaultTo(false);
+    table.boolean("is_sky").defaultTo(false);
   });
 };
 
