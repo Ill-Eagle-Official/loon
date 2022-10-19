@@ -25,5 +25,14 @@
   font-weight: bold;
   margin-bottom: 2.5em;
 }
+.home-page .button-container .btn-xxl {
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 0.3rem;
+}
+.home-page .button-container .btn-land {
+  color: purple;
+  background-color: #f0ead6;
+}
 
 /*# sourceMappingURL=HomePage.css.map */
