@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Components
 import HomePage from './components/HomePage';
 import NavBar from './components/NavBar';
+import LandPage from './components/LandPage';
 
 class App extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class App extends Component {
           <NavBar />
           <Routes>
             <Route exact path="/" element={<HomePage />} />
+            <Route path="/land" element={<LandPage />} />
           </Routes>
         </Router>
 
