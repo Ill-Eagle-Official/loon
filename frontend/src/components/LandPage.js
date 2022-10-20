@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Container, Card } from "react-bootstrap";
+import { Col, Row, Card } from "react-bootstrap";
 
-const axios = require('axios');
+const axios = require("axios");
 
 export default function LandPage() {
-
   const [land, setLand] = useState([]);
 
   useEffect(() => {
@@ -12,7 +11,8 @@ export default function LandPage() {
   });
 
   const getLand = () => {
-    axios.get('/api/items/land')
+    axios
+      .get("/api/items/land")
       .then((response) => {
         setLand(response.data);
       })
@@ -20,35 +20,34 @@ export default function LandPage() {
   };
 
   const handleCardClick = (id) => {
-    console.log('you clicked the card');
+    console.log("you clicked the card");
   };
 
   return (
-
     <>
+      <h1 className="land-title">LAND</h1>
 
-    <h1 className="land-title">LAND</h1>
-
-    <Container>
-
-      {land.map((item) => {
-        return (
-          <Card className="land-card" key={item.id} onClick={() => handleCardClick(item.id)}>
-            <Card.Img variant="top" src={item.image_url} />
-            <Card.Body>
-              <Card.Title>{item.name}</Card.Title>
-              <Card.Text className="card-text">
-                Tap me to learn more!
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        
-        )}
-      )}
-
-    </Container>
-
+      <Row xs={1} md={2} className="land-row">
+        {land.map((item) => {
+          return (
+            <Col className="land-col">
+              <Card
+                className="land-card"
+                key={item.id}
+                onClick={() => handleCardClick(item.id)}
+              >
+                <Card.Img variant="top" src={item.image_url} />
+                <Card.Body>
+                  <Card.Title>{item.name}</Card.Title>
+                  <Card.Text className="card-text">
+                    Tap me to learn more!
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          );
+        })}
+      </Row>
     </>
-
   );
 }
