@@ -11,6 +11,18 @@ module.exports = (knex) => {
       });
   });
 
+  // route to get land-specific items
+
+  router.get("/land", (req, res) => {
+    knex
+      .select("*")
+      .from("items")
+      .where("is_land", true)
+      .then((results) => {
+        res.json(results);
+      });
+  });
+
   router.post("/", (req, res) => {
     knex("items")
       .insert({

@@ -12,7 +12,7 @@ export default function LandPage() {
   });
 
   const getLand = () => {
-    axios.get('/api/items')
+    axios.get('/api/items/land')
       .then((response) => {
         setLand(response.data);
       })
@@ -34,7 +34,7 @@ export default function LandPage() {
       {land.map((item) => {
         return (
           <Card className="land-card" key={item.id} onClick={() => handleCardClick(item.id)}>
-            <Card.Img variant="top" src={item.image} />
+            <Card.Img variant="top" src={item.image_url} />
             <Card.Body>
               <Card.Title>{item.name}</Card.Title>
               <Card.Text className="card-text">
