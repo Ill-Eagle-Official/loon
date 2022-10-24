@@ -27,7 +27,7 @@ export default function SeaPage() {
     <>
       <h1 className="sea-title">Sea</h1>
 
-      <Row xs={1} md={2} className="land-row">
+      <Row xs={1} md={2} className="sea-row">
         {sea.map((item) => {
           return (
             <Col className="sea-col" key={item.id}>
