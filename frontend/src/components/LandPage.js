@@ -8,7 +8,7 @@ export default function LandPage() {
 
   useEffect(() => {
     getLand();
-  });
+  }, []);
 
   const getLand = () => {
     axios

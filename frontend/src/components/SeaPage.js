@@ -20,19 +20,19 @@ export default function LandPage() {
   };
 
   const handleCardClick = (id) => {
-    console.log("you clicked the card");
+    console.log("you clicked the card with id: " + id);
   };
 
   return (
     <>
-      <h1 className="land-title">LAND</h1>
+      <h1 className="sea-title">Sea</h1>
 
       <Row xs={1} md={2} className="land-row">
         {sea.map((item) => {
           return (
-            <Col className="land-col">
+            <Col className="sea-col">
               <Card
-                className="land-card"
+                className="sea-card"
                 key={item.id}
                 onClick={() => handleCardClick(item.id)}
               >
