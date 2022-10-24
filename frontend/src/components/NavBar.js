@@ -28,6 +28,9 @@ function NavBar() {
             <NavLink eventKey="4" as={Link} to="/sky" className="navbar-sky">
               Sky
             </NavLink>
+            <NavLink eventKey="5" as={Link} to="/new" className="navbar-new">
+              Create a New Item
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

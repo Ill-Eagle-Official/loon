@@ -12,6 +12,7 @@ import NavBar from './components/NavBar';
 import LandPage from './components/LandPage';
 import SeaPage from './components/SeaPage';
 import SkyPage from './components/SkyPage';
+import NewItemPage from './components/NewItemPage';
 
 class App extends Component {
   constructor(props) {
@@ -46,6 +47,7 @@ class App extends Component {
             <Route path="/land" element={<LandPage />} />
             <Route path="/sea" element={<SeaPage />} />
             <Route path="/sky" element={<SkyPage />} />
+            <Route path="/new" element={<NewItemPage />} />
           </Routes>
         </Router>
 
