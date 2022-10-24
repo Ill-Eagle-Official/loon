@@ -4,17 +4,17 @@ import { Col, Row, Card } from "react-bootstrap";
 const axios = require("axios");
 
 export default function LandPage() {
-  const [land, setLand] = useState([]);
+  const [sea, setSea] = useState([]);
 
   useEffect(() => {
-    getLand();
-  });
+    getSea();
+  }, []);
 
-  const getLand = () => {
+  const getSea = () => {
     axios
-      .get("/api/items/land")
+      .get("/api/items/sea")
       .then((response) => {
-        setLand(response.data);
+        setSea(response.data);
       })
       .catch((err) => console.log(err));
   };
@@ -28,7 +28,7 @@ export default function LandPage() {
       <h1 className="land-title">LAND</h1>
 
       <Row xs={1} md={2} className="land-row">
-        {land.map((item) => {
+        {sea.map((item) => {
           return (
             <Col className="land-col">
               <Card
