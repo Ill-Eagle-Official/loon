@@ -23,6 +23,18 @@ module.exports = (knex) => {
       });
   });
 
+  // route to get sea-specific items
+
+  router.get("/sea", (req, res) => {
+    knex
+      .select("*")
+      .from("items")
+      .where("is_sea", true)
+      .then((results) => {
+        res.json(results);
+      });
+  });
+
   router.post("/", (req, res) => {
     knex("items")
       .insert({
