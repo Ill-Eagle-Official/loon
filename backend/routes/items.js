@@ -35,6 +35,18 @@ module.exports = (knex) => {
       });
   });
 
+  // route for sky-specific items
+
+  router.get("/sky", (req, res) => {
+    knex
+      .select("*")
+      .from("items")
+      .where("is_sky", true)
+      .then((results) => {
+        res.json(results);
+      });
+  });
+
   router.post("/", (req, res) => {
     knex("items")
       .insert({
