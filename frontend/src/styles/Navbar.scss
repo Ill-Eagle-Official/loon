@@ -1,9 +1,11 @@
 .nav-main {
 
-  display: flex;
+  .nav-logo img {
 
-  justify-content: space-between;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-  align-items: center;
+  }
 
 }

@@ -1,6 +1,6 @@
-.nav-main {
+.nav-main .nav-logo img {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
