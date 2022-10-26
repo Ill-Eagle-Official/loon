@@ -10,15 +10,15 @@ function NavBar() {
       expand="lg"
       bg="light"
       variant="light"
-      className="nav-color"
+      className="nav-main"
     >
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
-            src="../loon-logo.png"
-            width="50"
-            height="50"
-            className="d-inline-block align-top"
+            src="../loon-logo-2.png"
+            width="75"
+            height="60"
+            className="nav-logo"
             alt="Loon logo"
           />
         </Navbar.Brand>
