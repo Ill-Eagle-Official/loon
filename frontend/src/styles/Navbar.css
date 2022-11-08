@@ -1,6 +1,21 @@
-.nav-main .nav-logo img {
+.nav-main {
   display: flex;
+}
+.nav-main .nav-logo img {
   justify-content: flex-start;
+  align-items: center;
+}
+.nav-main .nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-main .nav-links .nav-link {
+  margin: 0 1rem;
+}
+.nav-main .nav-right {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
