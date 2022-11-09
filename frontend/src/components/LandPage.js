@@ -32,6 +32,7 @@ export default function LandPage() {
           <CardFlex key={land.id} onClick={() => handleCardClick(land.id)}>
             <img src={land.image_url} alt={land.name} />
             <h4>{land.name}</h4>
+            <h4>Tap me to see more!</h4>
           </CardFlex>
         ))}
       </Flex>

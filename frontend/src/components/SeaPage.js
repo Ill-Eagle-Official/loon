@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Row, Card } from "react-bootstrap";
+import { Flex, CardFlex } from "./CardStyles/Card";
 
 const axios = require("axios");
 
@@ -27,31 +27,15 @@ export default function SeaPage() {
     <>
       <h1 className="sea-title">Sea</h1>
 
-      <Row xs={1} md={2} className="sea-row">
-        {sea.map((item) => {
-          return (
-            <Col className="sea-col" key={item.id}>
-              <Card
-                className="sea-card"
-                key={item.id}
-                onClick={() => handleCardClick(item.id)}
-              >
-                <Card.Img
-                  variant="top"
-                  src={item.image_url}
-                  className="card-image"
-                />
-                <Card.Body>
-                  <Card.Title className="card-title">{item.name}</Card.Title>
-                  <Card.Text className="card-text">
-                    Tap me to learn more!
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          );
-        })}
-      </Row>
+      <Flex>
+        {sea.map((sea) => (
+          <CardFlex key={sea.id} onClick={() => handleCardClick(sea.id)}>
+            <img src={sea.image_url} alt={sea.name} />
+            <h4>{sea.name}</h4>
+            <h4>Tap me to see more!</h4>
+          </CardFlex>
+        ))}
+      </Flex>
     </>
   );
 }

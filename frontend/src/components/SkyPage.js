@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Row, Card } from "react-bootstrap";
+import { Flex, CardFlex } from "./CardStyles/Card";
 
 const axios = require("axios");
 
@@ -27,31 +27,15 @@ export default function SkyPage() {
     <>
       <h1 className="sky-title">SKY</h1>
 
-      <Row xs={1} md={2} className="sky-row">
-        {sky.map((item) => {
-          return (
-            <Col className="sky-col" key={item.id}>
-              <Card
-                className="sky-card"
-                key={item.id}
-                onClick={() => handleCardClick(item.id)}
-              >
-                <Card.Img
-                  variant="top"
-                  src={item.image_url}
-                  className="card-image"
-                />
-                <Card.Body>
-                  <Card.Title className="card-title">{item.name}</Card.Title>
-                  <Card.Text className="card-text">
-                    Tap me to learn more!
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          );
-        })}
-      </Row>
+      <Flex>
+        {sky.map((sky) => (
+          <CardFlex key={sky.id} onClick={() => handleCardClick(sky.id)}>
+            <img src={sky.image_url} alt={sky.name} />
+            <h4>{sky.name}</h4>
+            <h4>Tap me to see more!</h4>
+          </CardFlex>
+        ))}
+      </Flex>
     </>
   );
 }
