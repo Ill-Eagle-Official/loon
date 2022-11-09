@@ -25,7 +25,7 @@ export default function SeaPage() {
 
   return (
     <>
-      <h1 className="sea-title">Sea</h1>
+      <h1 className="sea-title">SEA</h1>
 
       <Flex>
         {sea.map((sea) => (

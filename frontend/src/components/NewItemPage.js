@@ -83,7 +83,7 @@ export default function NewItemPage() {
           <Form.Check type="checkbox" label="Does this animal live on land?" />
           <Form.Check
             type="checkbox"
-            label="Does this animal live in the sea?"
+            label="Does this animal swim in the sea?"
           />
           <Form.Check
             type="checkbox"

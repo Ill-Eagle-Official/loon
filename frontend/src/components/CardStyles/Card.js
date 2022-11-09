@@ -54,7 +54,7 @@ export const CardFlex = styled.div`
   }
   h4 {
     text-align: center;
-    padding: 0.5rem;
+    margin: 0.5rem;
     color: white; 
   }
 `;
