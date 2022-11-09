@@ -45,6 +45,7 @@ export const CardFlex = styled.div`
   }
   img {
     width: 100%;
+    height: 75%;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
   }
