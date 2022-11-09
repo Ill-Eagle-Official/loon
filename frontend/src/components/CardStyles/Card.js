@@ -1,4 +1,32 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
+export const Flex = styled(motion.div)`
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  display: flex;
+  align-content: flex-start;
+  font-family: "Aclonica", sans-serif;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+  position: relative;
+  & {
+    .delete-btn {
+      position: absolute;
+      display: none;
+      margin-left: -1rem;
+      margin-top: -6.5rem;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+`;
 
 export const CardFlex = styled.div`
   border: 2px solid black;
