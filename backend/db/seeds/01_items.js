@@ -11,6 +11,8 @@ exports.seed = async function(knex) {
     {id: 2, name: 'Bald Eagle', image_url: 'https://www.allaboutbirds.org/guide/assets/photo/60328971-480px.jpg', video_url: 'https://www.youtube.com/watch?v=BEgEIEfSuvU' , is_sky: true},
     {id: 3, name: 'Osprey', image_url: 'https://cdn.download.ams.birds.cornell.edu/api/v1/asset/60320581/1800', video_url: 'https://www.youtube.com/watch?v=428L7cR4AMU' , is_sky: true},
     {id: 11, name: 'Mallard', image_url: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg', video_url: 'https://www.youtube.com/watch?v=RxT80Z_MiWo', is_sky: true, is_sea: true},
+    {id: 14, name: 'California Quail', image_url: 'https://www.allaboutbirds.org/guide/assets/photo/296733361-480px.jpg', video_url: 'https://www.youtube.com/watch?v=HHLOeNT511E', is_sky: true, is_land: true},
+    {id: 15, name: "Anna's Hummingbird", image_url: 'https://images.squarespace-cdn.com/content/v1/52dfe27be4b065c6bc90b4b5/1597164959152-P0IOCJ2XSAWN8RO02F5L/annas-hummingbird-male-bird-1140x1140-dQQVwnvE8.jpeg?format=1000w', video_url: 'https://www.youtube.com/watch?v=jL8yxW52Axc', is_sky: true},
     
     // land animals
     {id: 4, name: 'Beaver', image_url: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg', video_url: 'https://www.youtube.com/watch?v=oL5SD6z7AG8' , is_land: true},
