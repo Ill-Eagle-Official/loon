@@ -17,6 +17,8 @@ exports.seed = async function(knex) {
     {id: 5, name: 'Moose', image_url: 'https://canadiangeographic.ca/wp-content/uploads/2019/06/35879286-O_Boy__A_Double_Date-1-1024x683.jpg', video_url: 'https://www.youtube.com/watch?v=9MUCQwW2W7k', is_land: true},
     {id: 6, name: 'Black Bear', image_url: 'https://cdn.britannica.com/17/235817-050-97A76099/American-black-bear-ursus-americanus-standing-stream-British-Columbia-Canada.jpg', video_url: 'https://www.youtube.com/watch?v=hDiKSdfyVTo', is_land: true},
     {id: 10, name: 'Raccoon', image_url: 'https://www.ndow.org/wp-content/uploads/2021/10/Family-of-Raccoons.jpg', video_url: 'https://www.youtube.com/watch?v=1lViKrWgTYk', is_land: true},
+    {id: 12, name: 'Coyote', image_url: 'https://cdn.britannica.com/45/125545-050-B705597E/Coyote.jpg', video_url: 'https://www.youtube.com/watch?v=vOvrk54ftMM', is_land: true},
+    {id: 13, name: 'Mule Deer', image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Mule_buck_elk_creek_m_myatt_%285489214303%29.jpg', video_url: 'https://www.youtube.com/watch?v=h8DweS5Z684', is_land: true},
 
     
     // sea animals
