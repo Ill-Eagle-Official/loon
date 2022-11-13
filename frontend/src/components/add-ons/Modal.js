@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-bootstrap/Modal";
+import './add-on-styles/Modal.css';
 
 function CentredModal(props) {
   return (
