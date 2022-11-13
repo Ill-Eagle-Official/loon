@@ -14,6 +14,7 @@ exports.seed = async function(knex) {
     {id: 14, name: 'California Quail', image_url: 'https://www.allaboutbirds.org/guide/assets/photo/296733361-480px.jpg', video_url: 'https://www.youtube.com/watch?v=HHLOeNT511E', is_sky: true, is_land: true},
     {id: 15, name: "Anna's Hummingbird", image_url: 'https://images.squarespace-cdn.com/content/v1/52dfe27be4b065c6bc90b4b5/1597164959152-P0IOCJ2XSAWN8RO02F5L/annas-hummingbird-male-bird-1140x1140-dQQVwnvE8.jpeg?format=1000w', video_url: 'https://www.youtube.com/watch?v=jL8yxW52Axc', is_sky: true},
     {id: 17, name: 'Common Raven', image_url: 'https://upload.wikimedia.org/wikipedia/commons/3/31/3782_Common_Raven_in_flight.jpg', video_url: 'https://www.youtube.com/watch?v=tJcuKcfz8qY', is_sky: true},
+    {id: 20, name: 'Great Horned Owl', image_url: 'https://www.hww.ca/kaboom/images/Birds/Great-Horned-Owl.jpg', video_url: 'https://www.youtube.com/watch?v=L5GoUyVwxOw', is_sky: true},
     
     // land animals
     {id: 4, name: 'Beaver', image_url: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/American_Beaver.jpg', video_url: 'https://www.youtube.com/watch?v=oL5SD6z7AG8' , is_land: true},
@@ -24,11 +25,14 @@ exports.seed = async function(knex) {
     {id: 13, name: 'Mule Deer', image_url: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Mule_buck_elk_creek_m_myatt_%285489214303%29.jpg', video_url: 'https://www.youtube.com/watch?v=h8DweS5Z684', is_land: true},
     {id: 16, name: 'Rattlesnake', image_url: 'https://i.natgeofe.com/k/7f52bf68-4538-4195-894c-342bd89b187d/rattlesnake-tongue_3x2.jpg', video_url: 'https://www.youtube.com/watch?v=sKh5K1z1i7U', is_land: true},
     {id: 18, name: 'Gray Wolf', image_url: 'https://cdn.britannica.com/07/5207-050-5BC9F251/Gray-wolf.jpg', video_url: 'https://www.youtube.com/watch?v=VYKsI5ILiaQ', is_land: true},
+    {id: 19, name: 'Zombie Mushroom', image_url: 'https://learn.freshcap.com/wp-content/uploads/2020/12/does-cordyceps-grow-on-bugs-1.png', video_url: 'https://www.youtube.com/watch?v=XuKjBIBBAL8', is_land: true},
 
     
     // sea animals
     {id: 7, name: 'Sockeye Salmon', image_url: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Sockeye_salmon_swimming_right.jpg', video_url: 'https://www.youtube.com/watch?v=T7zj2f7oStw', is_sea: true},
     {id: 8, name: 'Orca', image_url: 'https://i.cbc.ca/1.6201135.1633481213!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/orca-study-ubc.jpg', video_url: 'https://www.youtube.com/watch?v=pEP0sMO-nUQ', is_sea: true},
     {id: 9, name: 'Red-Eared Slider Turtle', image_url: 'https://www.japantimes.co.jp/wp-content/uploads/2016/04/n-turtle-a-20160427.jpg', video_url: 'https://www.youtube.com/watch?v=tFlT4vZdVT4', is_sea: true},
+    {id: 21, name: 'Red Sea Urchin', image_url: 'https://upload.wikimedia.org/wikipedia/commons/2/2e/Strongylocentrotus_franciscanus.jpg', video_url: 'https://www.youtube.com/watch?v=aTaHjh1DRGw', is_sea: true},
+    {id: 22, name: 'Abalone', image_url: 'https://asianinspirations.com.au/wp-content/uploads/2018/12/Abalone-Live.jpg', video_url: 'https://www.youtube.com/watch?v=A2M1yKm_x1M', is_sea: true}
   ]);
 };
