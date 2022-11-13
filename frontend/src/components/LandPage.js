@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Flex, CardFlex } from "./CardStyles/Card";
+import CentredModal from "./add-ons/Modal";
 
 const axios = require("axios");
 
 export default function LandPage() {
+
   const [land, setLand] = useState([]);
+  const [itemObject, setItemObject] = useState({});
+  const [modalView, setModalView] = useState(false);
 
   useEffect(() => {
     getLand();
@@ -19,8 +23,15 @@ export default function LandPage() {
       .catch((err) => console.log(err));
   };
 
+  const singleItemId = (id) => {
+    const item = land.find((item) => item.id === id);
+
+    setItemObject(item);
+  };
+
   const handleCardClick = (id) => {
-    console.log("you clicked the card");
+    singleItemId(id);
+    setModalView(true);
   };
 
   return (
@@ -35,6 +46,14 @@ export default function LandPage() {
             <h4>Tap me to see more!</h4>
           </CardFlex>
         ))}
+
+        <CentredModal
+          show={modalView}
+          onHide={() => setModalView(false)}
+          title={itemObject.name}
+          videoId={itemObject.video_url}
+
+        />
       </Flex>
     </>
   );
