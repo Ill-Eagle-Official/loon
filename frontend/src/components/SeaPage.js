@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Flex, CardFlex } from "./CardStyles/Card";
+import CentredModal from "./add-ons/Modal";
 
 const axios = require("axios");
 
 export default function SeaPage() {
   const [sea, setSea] = useState([]);
+  const [itemObject, setItemObject] = useState({});
+  const [modalView, setModalView] = useState(false);
 
   useEffect(() => {
     getSea();
@@ -20,7 +23,10 @@ export default function SeaPage() {
   };
 
   const handleCardClick = (id) => {
-    console.log("you clicked the card with id: " + id);
+    const item = sea.find((item) => item.id === id);
+
+    setItemObject(item);
+    setModalView(true);
   };
 
   return (
@@ -35,6 +41,13 @@ export default function SeaPage() {
             <h4>Tap me to see more!</h4>
           </CardFlex>
         ))}
+
+        <CentredModal
+          show={modalView}
+          onHide={() => setModalView(false)}
+          title={itemObject.name}
+          videoId={itemObject.video_url}
+        />
       </Flex>
     </>
   );

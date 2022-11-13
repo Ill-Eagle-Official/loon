@@ -23,14 +23,10 @@ export default function LandPage() {
       .catch((err) => console.log(err));
   };
 
-  const singleItemId = (id) => {
+  const handleCardClick = (id) => {
     const item = land.find((item) => item.id === id);
 
     setItemObject(item);
-  };
-
-  const handleCardClick = (id) => {
-    singleItemId(id);
     setModalView(true);
   };
 
