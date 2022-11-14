@@ -25,14 +25,35 @@
   font-weight: bold;
   margin-bottom: 2.5em;
 }
-.home-page .button-container .btn-xxl {
-  padding: 1rem 1.5rem;
-  font-size: 1.5rem;
-  border-radius: 0.3rem;
+.home-page .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.home-page .button-container .btn-land {
-  color: purple;
-  background-color: #f0ead6;
+.home-page .button-container .land-button {
+  background-color: #7b3a1c;
+  color: #c2bbb3;
+  font-size: 1.25em;
+  margin: 0 1em;
+  border-color: #000000;
+  width: 100px;
+}
+.home-page .button-container .sea-button {
+  background-color: #023e8a;
+  color: #90e0ef;
+  font-size: 1.25em;
+  margin: 0 1em;
+  border-color: #000000;
+  width: 100px;
+}
+.home-page .button-container .sky-button {
+  background-color: #c8d7cd;
+  color: #1b5299;
+  font-size: 1.25em;
+  margin: 0 1em;
+  border-color: #000000;
+  width: 100px;
 }
 
 /*# sourceMappingURL=HomePage.css.map */

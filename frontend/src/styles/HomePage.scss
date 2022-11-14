@@ -34,4 +34,40 @@
 
   }
 
+  .button-container {
+      
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  
+      .land-button {
+        background-color: #7b3a1c;
+        color: #c2bbb3;
+        font-size: 1.25em;
+        margin: 0 1em;
+        border-color: #000000;
+        width: 100px;
+      }
+
+      .sea-button {
+        background-color: #023e8a;
+        color: #90e0ef;
+        font-size: 1.25em;
+        margin: 0 1em;
+        border-color: #000000;
+        width: 100px;
+      }
+
+      .sky-button {
+        background-color: #c8d7cd;
+        color: #1b5299;
+        font-size: 1.25em;
+        margin: 0 1em;
+        border-color: #000000;
+        width: 100px;
+      }
+  
+  }
+
 }
