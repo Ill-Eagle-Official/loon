@@ -1,0 +1,35 @@
+.sky-page {
+  background-color: #c8d7cd;
+}
+.sky-page .sky-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1b5299;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 2rem;
+}
+.sky-page .sky-card {
+  background-color: #f1ecce;
+}
+.sky-page .sky-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1b5299;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+}
+.sky-page .sky-card .card-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #1b5299;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.5rem;
+}
+
+/*# sourceMappingURL=SkyStyles.css.map */

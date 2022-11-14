@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Flex, CardFlex } from "./CardStyles/Card";
 import CentredModal from "./add-ons/Modal";
 
+import '../styles/SkyStyles.css';
+
 const axios = require("axios");
 
 export default function SkyPage() {
@@ -30,15 +32,16 @@ export default function SkyPage() {
   };
 
   return (
+    <div className='sky-page'>
     <>
       <h1 className="sky-title">SKY</h1>
 
       <Flex>
         {sky.map((sky) => (
-          <CardFlex key={sky.id} onClick={() => handleCardClick(sky.id)}>
+          <CardFlex className="sky-card" key={sky.id} onClick={() => handleCardClick(sky.id)}>
             <img src={sky.image_url} alt={sky.name} />
-            <h4>{sky.name}</h4>
-            <h4>Tap me to see more!</h4>
+            <h4 className="card-title">{sky.name}</h4>
+            <h4 className="card-description">Tap me to see more!</h4>
           </CardFlex>
         ))}
 
@@ -50,5 +53,6 @@ export default function SkyPage() {
         />
       </Flex>
     </>
+    </div>
   );
 }
