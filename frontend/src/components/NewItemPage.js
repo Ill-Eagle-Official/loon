@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 
+import "../styles/AddStyles.css";
+
 export default function NewItemPage() {
   const [item, setItem] = useState({
     name: "",
@@ -49,7 +51,7 @@ export default function NewItemPage() {
 
   return (
     <>
-      <h1 className="new-item-title">Add a new item</h1>
+      <h1 className="new-item-title">Add a New Item</h1>
 
       <Form className="new-item-form" onSubmit={handleSubmit}>
         <Form.Group controlId="formBasicName" className="name-entry">
@@ -97,7 +99,7 @@ export default function NewItemPage() {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="submit-button">
           Submit
         </Button>
       </Form>
