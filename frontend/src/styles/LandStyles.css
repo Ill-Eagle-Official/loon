@@ -10,7 +10,10 @@
   padding: 0;
   padding-top: 2rem;
 }
-.land-page .card-title {
+.land-page .land-card {
+  background-color: #432210;
+}
+.land-page .land-card .card-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: #c2bbb3;
@@ -19,7 +22,7 @@
   padding: 0;
   padding-top: 1rem;
 }
-.land-page .card-description {
+.land-page .land-card .card-description {
   font-size: 1.2rem;
   font-weight: 400;
   color: #c2bbb3;
@@ -29,7 +32,7 @@
   padding-bottom: 0.5rem;
 }
 
-.nav-main {
+.navbar-custom {
   background-color: #d8893d;
 }
 

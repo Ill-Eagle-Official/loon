@@ -30,15 +30,16 @@ export default function SeaPage() {
   };
 
   return (
+    <div className="sea-page">
     <>
       <h1 className="sea-title">SEA</h1>
 
       <Flex>
         {sea.map((sea) => (
-          <CardFlex key={sea.id} onClick={() => handleCardClick(sea.id)}>
+          <CardFlex className="sea-card" key={sea.id} onClick={() => handleCardClick(sea.id)}>
             <img src={sea.image_url} alt={sea.name} />
-            <h4>{sea.name}</h4>
-            <h4>Tap me to see more!</h4>
+            <h4 className="card-title">{sea.name}</h4>
+            <h4 className="card-description">Tap me to see more!</h4>
           </CardFlex>
         ))}
 
@@ -50,5 +51,6 @@ export default function SeaPage() {
         />
       </Flex>
     </>
+    </div>
   );
 }

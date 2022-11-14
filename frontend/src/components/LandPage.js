@@ -38,7 +38,7 @@ export default function LandPage() {
 
         <Flex>
           {land.map((land) => (
-            <CardFlex key={land.id} onClick={() => handleCardClick(land.id)}>
+            <CardFlex className="land-card" key={land.id} onClick={() => handleCardClick(land.id)}>
               <img src={land.image_url} alt={land.name} />
               <h4 className="card-title">{land.name}</h4>
               <h4 className="card-description">Tap me to see more!</h4>
