@@ -52,7 +52,7 @@ export default function NewItemPage() {
       <h1 className="new-item-title">Add a new item</h1>
 
       <Form className="new-item-form" onSubmit={handleSubmit}>
-        <Form.Group controlId="formBasicName">
+        <Form.Group controlId="formBasicName" className="name-entry">
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
@@ -61,7 +61,7 @@ export default function NewItemPage() {
           />
         </Form.Group>
 
-        <Form.Group controlId="formBasicImage">
+        <Form.Group controlId="formBasicImage" className="image-entry">
           <Form.Label>Image URL</Form.Label>
           <Form.Control
             type="text"
@@ -70,7 +70,7 @@ export default function NewItemPage() {
           />
         </Form.Group>
 
-        <Form.Group controlId="formBasicVideo">
+        <Form.Group controlId="formBasicVideo" className='video-entry'>
           <Form.Label>Video URL</Form.Label>
           <Form.Control
             type="text"
@@ -79,13 +79,19 @@ export default function NewItemPage() {
           />
         </Form.Group>
 
-        <Form.Group controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Does this animal live on land?" />
+        <Form.Group controlId="formBasicCheckbox" className="categories">
           <Form.Check
+            inline
+            type="checkbox"
+            label="Does this animal live on land?"
+          />
+          <Form.Check
+            inline
             type="checkbox"
             label="Does this animal swim in the sea?"
           />
           <Form.Check
+            inline
             type="checkbox"
             label="Does this animal fly in the sky?"
           />
