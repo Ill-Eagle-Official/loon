@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Flex, CardFlex } from "./CardStyles/Card";
 import CentredModal from "./add-ons/Modal";
 
+import '../styles/LandStyles.css';
+
 const axios = require("axios");
 
 export default function LandPage() {
-
   const [land, setLand] = useState([]);
   const [itemObject, setItemObject] = useState({});
   const [modalView, setModalView] = useState(false);
@@ -31,26 +32,27 @@ export default function LandPage() {
   };
 
   return (
+      <div className="land-page">
     <>
-      <h1 className="land-title">LAND</h1>
+        <h1 className="land-title">LAND</h1>
 
-      <Flex>
-        {land.map((land) => (
-          <CardFlex key={land.id} onClick={() => handleCardClick(land.id)}>
-            <img src={land.image_url} alt={land.name} />
-            <h4>{land.name}</h4>
-            <h4>Tap me to see more!</h4>
-          </CardFlex>
-        ))}
+        <Flex>
+          {land.map((land) => (
+            <CardFlex key={land.id} onClick={() => handleCardClick(land.id)}>
+              <img src={land.image_url} alt={land.name} />
+              <h4>{land.name}</h4>
+              <h4>Tap me to see more!</h4>
+            </CardFlex>
+          ))}
 
-        <CentredModal
-          show={modalView}
-          onHide={() => setModalView(false)}
-          title={itemObject.name}
-          videoId={itemObject.video_url}
-
-        />
-      </Flex>
+          <CentredModal
+            show={modalView}
+            onHide={() => setModalView(false)}
+            title={itemObject.name}
+            videoId={itemObject.video_url}
+          />
+        </Flex>
     </>
+      </div>
   );
 }

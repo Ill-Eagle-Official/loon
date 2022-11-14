@@ -1,6 +1,5 @@
 // Base Dependencies
 import React, { Component } from 'react';
-import axios from 'axios';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -22,18 +21,6 @@ class App extends Component {
     }
   }
 
-  fetchData = () => {
-    axios.get('/api/items') // You can simply make your requests to "/api/whatever you want"
-    .then((response) => {
-      // handle success
-      console.log(response.data) // The entire response from the Rails API
-
-      console.log(response.data.message) // Just the message
-      this.setState({
-        message: response.data.message
-      });
-    }) 
-  }
 
   render() {
     return (
@@ -41,7 +28,7 @@ class App extends Component {
       <div className="App">
 
         <Router>
-          <NavBar />
+          <NavBar className="nav-color"/>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/land" element={<LandPage />} />
