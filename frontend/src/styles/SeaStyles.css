@@ -1,3 +1,35 @@
-
+.sea-page {
+  background-color: #023e8a;
+}
+.sea-page .sea-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #90e0ef;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 2rem;
+}
+.sea-page .sea-card {
+  background-color: #03045e;
+}
+.sea-page .sea-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #90e0ef;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+}
+.sea-page .sea-card .card-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #90e0ef;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.5rem;
+}
 
 /*# sourceMappingURL=SeaStyles.css.map */

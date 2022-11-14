@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Flex, CardFlex } from "./CardStyles/Card";
 import CentredModal from "./add-ons/Modal";
 
+import '../styles/SeaStyles.css';
+
 const axios = require("axios");
 
 export default function SeaPage() {

@@ -7,8 +7,8 @@ function CentredModal(props) {
     <Modal {...props} centered size="lg">
       <Modal.Header closeButton>
         <Modal.Title>
-          <div className="modal-title">
-            <h1>{props.title}</h1>
+          <div>
+            <h1 className='modal-title'>{props.title}</h1>
           </div>
         </Modal.Title>
       </Modal.Header>
