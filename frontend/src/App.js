@@ -28,7 +28,7 @@ class App extends Component {
       <div className="App">
 
         <Router>
-          <NavBar className="nav-color"/>
+          <NavBar />
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/land" element={<LandPage />} />
