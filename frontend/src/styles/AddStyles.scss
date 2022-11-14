@@ -1,19 +1,14 @@
-.new-item-title {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
+.new-item-page {
+  background-color: #f0ead6;
+  height: 100vh;
 
-.new-item-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 75%;
+  .new-item-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
 
-  .name-entry {
+  .new-item-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,69 +16,78 @@
     margin: 0 auto;
     width: 75%;
 
-    .form-label {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+    .name-entry {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 75%;
+
+      .form-label {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-control {
+        margin-bottom: 1.5rem;
+      }
     }
 
-    .form-control {
-      margin-bottom: 1.5rem;
-    }
-  }
+    .image-entry {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 75%;
 
-  .image-entry {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 75%;
+      .form-label {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
 
-    .form-label {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .form-control {
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  .video-entry {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 75%;
-
-    .form-label {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+      .form-control {
+        margin-bottom: 1.5rem;
+      }
     }
 
-    .form-control {
-      margin-bottom: 1.5rem;
+    .video-entry {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 75%;
+
+      .form-label {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-control {
+        margin-bottom: 1.5rem;
+      }
     }
-  }
 
-  .categories {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    width: 75%;
+    .categories {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 75%;
 
-    .form-check {
-      margin-bottom: 1rem;
+      .form-check {
+        margin-bottom: 1rem;
+      }
     }
-  }
 
-  .submit-button {
-    background-color: black;
+    .submit-button {
+      background-color: black;
+    }
   }
 }

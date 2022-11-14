@@ -50,6 +50,7 @@ export default function NewItemPage() {
   };
 
   return (
+    <div className="new-item-page">
     <>
       <h1 className="new-item-title">Add a New Item</h1>
 
@@ -104,5 +105,6 @@ export default function NewItemPage() {
         </Button>
       </Form>
     </>
+    </div>
   );
 }
