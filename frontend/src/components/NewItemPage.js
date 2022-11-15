@@ -8,17 +8,19 @@ export default function NewItemPage() {
     name: "",
     image_url: "",
     video_url: "",
-    is_land: false,
-    is_sea: false,
-    is_sky: false,
+    is_land: "false",
+    is_sea: "false",
+    is_sky: "false",
   });
 
   const handleChange = (event) => {
+    event.preventDefault();
     const updatedItem = {
       ...item,
       [event.target.name]: event.target.value,
     };
     setItem(updatedItem);
+    console.log(updatedItem);
   };
 
   const handleSubmit = (event) => {
@@ -47,64 +49,89 @@ export default function NewItemPage() {
       .catch((error) => {
         console.error("Error:", error);
       });
+
+
   };
 
   return (
     <div className="new-item-page">
-    <>
-      <h1 className="new-item-title">Add a New Item</h1>
+      <>
+        <h1 className="new-item-title">Add a New Item</h1>
 
-      <Form className="new-item-form" onSubmit={handleSubmit}>
-        <Form.Group controlId="formBasicName" className="name-entry">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter the name of the animal you want to add!"
-            value={item.name}
-          />
-        </Form.Group>
+        <Form className="new-item-form" onSubmit={handleSubmit}>
+          <Form.Group controlId="formBasicName" className="name-entry">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              name="name"
+              type="text"
+              placeholder="Enter the name of the animal you want to add!"
+              value={item.name}
+              onChange={handleChange}
+            />
+          </Form.Group>
 
-        <Form.Group controlId="formBasicImage" className="image-entry">
-          <Form.Label>Image URL</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter an image URL for the animal you want to add!"
-            value={item.image_url}
-          />
-        </Form.Group>
+          <Form.Group controlId="formBasicImage" className="image-entry">
+            <Form.Label>Image URL</Form.Label>
+            <Form.Control
+              name="image_url"
+              type="text"
+              placeholder="Enter an image URL for the animal you want to add!"
+              value={item.image_url}
+              onChange={handleChange}
+            />
+          </Form.Group>
 
-        <Form.Group controlId="formBasicVideo" className='video-entry'>
-          <Form.Label>Video URL</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter a video URL for the animal you want to add!"
-            value={item.video_url}
-          />
-        </Form.Group>
+          <Form.Group controlId="formBasicVideo" className="video-entry">
+            <Form.Label>Video URL</Form.Label>
+            <Form.Control
+              name="video_url"
+              type="text"
+              placeholder="Enter a video URL for the animal you want to add!"
+              value={item.video_url}
+              onChange={handleChange}
+            />
+          </Form.Group>
 
-        <Form.Group controlId="formBasicCheckbox" className="categories">
-          <Form.Check
-            inline
-            type="checkbox"
-            label="Does this animal live on land?"
-          />
-          <Form.Check
-            inline
-            type="checkbox"
-            label="Does this animal swim in the sea?"
-          />
-          <Form.Check
-            inline
-            type="checkbox"
-            label="Does this animal fly in the sky?"
-          />
-        </Form.Group>
+          <Form.Group controlId="formGroupSelect" className="select-entry">
+            <Form.Label>Does this animal live on land?</Form.Label>
+            <Form.Control
+              as="select"
+              name="is_land"
+              value={item.is_land}
+              onChange={handleChange}
+            >
+              <option value={true}>Yes</option>
+              <option value={"false"}>No</option>
+            </Form.Control>
 
-        <Button variant="primary" type="submit" className="submit-button">
-          Submit
-        </Button>
-      </Form>
-    </>
+            <Form.Label>Does this animal live in the sea?</Form.Label>
+            <Form.Control
+              as="select"
+              name="is_sea"
+              value={item.is_sea}
+              onChange={handleChange}
+            >
+              <option value={true}>Yes</option>
+              <option value={"false"}>No</option>
+            </Form.Control>
+
+            <Form.Label>Does this animal fly in the sky?</Form.Label>
+            <Form.Control
+              as="select"
+              name="is_sky"
+              value={item.is_sky}
+              onChange={handleChange}
+            >
+              <option value={true}>Yes</option>
+              <option value={"false"}>No</option>
+            </Form.Control>
+          </Form.Group>
+
+          <Button variant="primary" type="submit" className="submit-button">
+            Submit
+          </Button>
+        </Form>
+      </>
     </div>
   );
 }

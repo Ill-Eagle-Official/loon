@@ -17,7 +17,7 @@ module.exports = (knex) => {
     knex
       .select("*")
       .from("items")
-      .where("is_land", true)
+      .where("is_land", "true")
       .then((results) => {
         res.json(results);
       });
@@ -29,7 +29,7 @@ module.exports = (knex) => {
     knex
       .select("*")
       .from("items")
-      .where("is_sea", true)
+      .where("is_sea", "true")
       .then((results) => {
         res.json(results);
       });
@@ -41,7 +41,7 @@ module.exports = (knex) => {
     knex
       .select("*")
       .from("items")
-      .where("is_sky", true)
+      .where("is_sky", "true")
       .then((results) => {
         res.json(results);
       });
