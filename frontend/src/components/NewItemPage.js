@@ -40,6 +40,11 @@ export default function NewItemPage() {
       is_sky: item.is_sky,
     };
 
+    if(password !== "cooloon") {
+      alert("Wrong password!");
+      return;
+    }
+
     fetch("/api/items", {
       method: "POST",
       headers: {
