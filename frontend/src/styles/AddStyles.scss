@@ -73,16 +73,22 @@
       }
     }
 
-    .categories {
+    .select-entry {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      width: 75%;
+      width: 30%;
 
-      .form-check {
-        margin-bottom: 1rem;
+      .form-control {
+        margin-bottom: 0.5rem;
+      }
+
+      .form-label {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
       }
     }
 
