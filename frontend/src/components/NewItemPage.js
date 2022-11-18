@@ -13,8 +13,13 @@ export default function NewItemPage() {
     is_sky: "false",
   });
 
+  const [password, setPassword] = useState("");
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
   const handleChange = (event) => {
-    event.preventDefault();
     const updatedItem = {
       ...item,
       [event.target.name]: event.target.value,
@@ -125,6 +130,17 @@ export default function NewItemPage() {
               <option value={true}>Yes</option>
               <option value={"false"}>No</option>
             </Form.Control>
+          </Form.Group>
+
+          <Form.Group controlId="formBasicPassword" className="password-entry">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              name="password"
+              type="password"
+              placeholder="Enter the password to add a new item!"
+              value={password}
+              onChange={handlePasswordChange}
+            />
           </Form.Group>
 
           <Button variant="primary" type="submit" className="submit-button">
