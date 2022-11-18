@@ -45,6 +45,11 @@ export default function NewItemPage() {
       return;
     }
 
+    if (newItem.name === "" || newItem.image_url === "" || newItem.video_url === "") {
+      alert("Please fill in all fields!");
+      return;
+    }
+
     fetch("/api/items", {
       method: "POST",
       headers: {
@@ -55,6 +60,10 @@ export default function NewItemPage() {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
+      })
+      .then(() => {
+        alert("Item added!");
+        window.location.href = "/";
       })
       .catch((error) => {
         console.error("Error:", error);
