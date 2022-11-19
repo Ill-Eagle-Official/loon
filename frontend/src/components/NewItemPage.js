@@ -59,10 +59,8 @@ export default function NewItemPage() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
-      })
-      .then(() => {
-        alert("Item added!");
+        console.log(data);
+        alert("Item added successfully!");
         window.location.href = "/";
       })
       .catch((error) => {
