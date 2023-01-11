@@ -16,13 +16,8 @@ function NavBar() {
     >
       <Container>
         <div className="nav-logo">
-          <Navbar.Brand as={Link} to="/">
-            <img
-              src="../loon-logo-2.png"
-              width="75"
-              height="60"
-              alt="Loon logo"
-            />
+          <Navbar.Brand as={Link} to="/loon">
+            <p className="nav-logo-text">Loon</p>
           </Navbar.Brand>
         </div>
 
