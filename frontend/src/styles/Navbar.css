@@ -1,7 +1,10 @@
 .nav-main {
   display: flex;
 }
-.nav-main .nav-logo img {
+.nav-main .nav-logo {
+  font-size: 3rem;
+  font-family: "Cookie", cursive;
+  font-weight: 700;
   justify-content: flex-start;
   align-items: center;
 }

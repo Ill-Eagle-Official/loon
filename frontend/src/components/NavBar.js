@@ -15,11 +15,9 @@ function NavBar() {
       className="nav-main"
     >
       <Container>
-        <div className="nav-logo">
-          <Navbar.Brand as={Link} to="/loon">
-            <p className="nav-logo-text">Loon</p>
-          </Navbar.Brand>
-        </div>
+        <Navbar.Brand as={Link} to="/loon">
+          <div className="nav-logo">Loon</div>
+        </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
