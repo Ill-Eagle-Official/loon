@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Loon/static/css/main.90b49915.css",
+    "main.js": "/Loon/static/js/main.a522b173.js",
+    "index.html": "/Loon/index.html",
+    "main.90b49915.css.map": "/Loon/static/css/main.90b49915.css.map",
+    "main.a522b173.js.map": "/Loon/static/js/main.a522b173.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.90b49915.css",
+    "static/js/main.a522b173.js"
+  ]
+}
