@@ -28,46 +28,13 @@ export default function NewItemPage() {
     console.log(updatedItem);
   };
 
+  // handleSubmit function that returns an alert
+
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    const newItem = {
-      name: item.name,
-      image_url: item.image_url,
-      video_url: item.video_url,
-      is_land: item.is_land,
-      is_sea: item.is_sea,
-      is_sky: item.is_sky,
-    };
-
-    if(password !== "cooloon") {
-      alert("Wrong password!");
-      return;
-    }
-
-    if (newItem.name === "" || newItem.image_url === "" || newItem.video_url === "") {
-      alert("Please fill in all fields!");
-      return;
-    }
-
-    fetch("/api/items", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newItem),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        alert("Item added successfully!");
-        window.location.href = "/";
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-
-
+    alert(
+      "Oops! Sorry, this function isn't working at the moment! Please contact Ill Eagle for more information!"
+    );
   };
 
   return (
@@ -163,3 +130,46 @@ export default function NewItemPage() {
     </div>
   );
 }
+
+// HANDLE SUBMIT FOR EXPRESS SERVER
+
+// const handleSubmit = (event) => {
+//   event.preventDefault();
+
+//   const newItem = {
+//     name: item.name,
+//     image_url: item.image_url,
+//     video_url: item.video_url,
+//     is_land: item.is_land,
+//     is_sea: item.is_sea,
+//     is_sky: item.is_sky,
+//   };
+
+//   if(password !== "cooloon") {
+//     alert("Wrong password!");
+//     return;
+//   }
+
+//   if (newItem.name === "" || newItem.image_url === "" || newItem.video_url === "") {
+//     alert("Please fill in all fields!");
+//     return;
+//   }
+
+//   fetch("/api/items", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify(newItem),
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//       alert("Item added successfully!");
+//       window.location.href = "/";
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//     });
+
+// };
