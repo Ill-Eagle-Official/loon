@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Flex, CardFlex } from "./CardStyles/Card";
 import CentredModal from "./add-ons/Modal";
 
-import '../styles/SkyStyles.css';
+import animalsArray from "../utils/AnimalsStatic";
+
+import "../styles/SkyStyles.css";
 
 const axios = require("axios");
 
@@ -12,9 +14,10 @@ export default function SkyPage() {
   const [modalView, setModalView] = useState(false);
 
   useEffect(() => {
-    getSky();
+    getStaticSky();
   }, []);
 
+  // change useEffect to take this function when using express backend
   const getSky = () => {
     axios
       .get("/api/items/sky")
@@ -22,6 +25,19 @@ export default function SkyPage() {
         setSky(response.data);
       })
       .catch((err) => console.log(err));
+  };
+
+  // change useEffect to this function when using static data
+  const getStaticSky = () => {
+    let finalArray = [];
+
+    animalsArray.forEach((animal) => {
+      if (animal.is_sky === "true") {
+        finalArray.push(animal);
+      }
+    });
+
+    setSky(finalArray);
   };
 
   const handleCardClick = (id) => {
@@ -32,27 +48,31 @@ export default function SkyPage() {
   };
 
   return (
-    <div className='sky-page'>
-    <>
-      <h1 className="sky-title">SKY</h1>
+    <div className="sky-page">
+      <>
+        <h1 className="sky-title">SKY</h1>
 
-      <Flex>
-        {sky.map((sky) => (
-          <CardFlex className="sky-card" key={sky.id} onClick={() => handleCardClick(sky.id)}>
-            <img src={sky.image_url} alt={sky.name} />
-            <h4 className="card-title">{sky.name}</h4>
-            <h4 className="card-description">Tap me to see more!</h4>
-          </CardFlex>
-        ))}
+        <Flex>
+          {sky.map((sky) => (
+            <CardFlex
+              className="sky-card"
+              key={sky.id}
+              onClick={() => handleCardClick(sky.id)}
+            >
+              <img src={sky.image_url} alt={sky.name} />
+              <h4 className="card-title">{sky.name}</h4>
+              <h4 className="card-description">Tap me to see more!</h4>
+            </CardFlex>
+          ))}
 
-        <CentredModal
-          show={modalView}
-          onHide={() => setModalView(false)}
-          title={itemObject.name}
-          videoId={itemObject.video_url}
-        />
-      </Flex>
-    </>
+          <CentredModal
+            show={modalView}
+            onHide={() => setModalView(false)}
+            title={itemObject.name}
+            videoId={itemObject.video_url}
+          />
+        </Flex>
+      </>
     </div>
   );
 }
