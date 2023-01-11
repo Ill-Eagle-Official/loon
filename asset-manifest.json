@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Loon/static/css/main.90b49915.css",
-    "main.js": "/Loon/static/js/main.a522b173.js",
-    "index.html": "/Loon/index.html",
-    "main.90b49915.css.map": "/Loon/static/css/main.90b49915.css.map",
-    "main.a522b173.js.map": "/Loon/static/js/main.a522b173.js.map"
+    "main.css": "/loon/static/css/main.de67276d.css",
+    "main.js": "/loon/static/js/main.75fd7bc8.js",
+    "index.html": "/loon/index.html",
+    "main.de67276d.css.map": "/loon/static/css/main.de67276d.css.map",
+    "main.75fd7bc8.js.map": "/loon/static/js/main.75fd7bc8.js.map"
   },
   "entrypoints": [
-    "static/css/main.90b49915.css",
-    "static/js/main.a522b173.js"
+    "static/css/main.de67276d.css",
+    "static/js/main.75fd7bc8.js"
   ]
 }
