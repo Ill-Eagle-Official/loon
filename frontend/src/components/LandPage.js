@@ -48,31 +48,33 @@ export default function LandPage() {
   };
 
   return (
-    <div className="land-page">
-      <>
-        <h1 className="land-title">LAND</h1>
+    <div className="background">
+      <div className="land-page">
+        <>
+          <h1 className="land-title">LAND</h1>
 
-        <Flex>
-          {land.map((land) => (
-            <CardFlex
-              className="land-card"
-              key={land.id}
-              onClick={() => handleCardClick(land.id)}
-            >
-              <img src={land.image_url} alt={land.name} />
-              <h4 className="card-title">{land.name}</h4>
-              <h4 className="card-description">Tap me to see more!</h4>
-            </CardFlex>
-          ))}
+          <Flex>
+            {land.map((land) => (
+              <CardFlex
+                className="land-card"
+                key={land.id}
+                onClick={() => handleCardClick(land.id)}
+              >
+                <img src={land.image_url} alt={land.name} />
+                <h4 className="card-title">{land.name}</h4>
+                <h4 className="card-description">Tap me to see more!</h4>
+              </CardFlex>
+            ))}
 
-          <CentredModal
-            show={modalView}
-            onHide={() => setModalView(false)}
-            title={itemObject.name}
-            videoId={itemObject.video_url}
-          />
-        </Flex>
-      </>
+            <CentredModal
+              show={modalView}
+              onHide={() => setModalView(false)}
+              title={itemObject.name}
+              videoId={itemObject.video_url}
+            />
+          </Flex>
+        </>
+      </div>
     </div>
   );
 }
